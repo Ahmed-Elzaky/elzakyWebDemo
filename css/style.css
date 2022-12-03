@@ -1,0 +1,259 @@
+@import url("https://fonts.googleapis.com/css2?family=El+Messiri");
+
+/* Start Global */
+
+:root {
+  --main-color: #32a0c2;
+  --second-color: #353637;
+  --section-padding: 100px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "El Messiri", sans-serif;
+  background-color: #f4f4f4;
+  direction: rtl;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+main > section {
+  width: 100%;
+  margin: auto;
+  /* overflow: hidden; */
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.bg-d {
+  background-color: #dc3545;
+}
+.bg-w {
+  background-color: #ffc107;
+}
+.bg-s {
+  background-color: #198754;
+}
+/* End Global */
+
+/* Start Header */
+#header {
+  background-color: var(--second-color);
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  border-bottom: 3px solid #32a0c2;
+  padding: 10px 100px;
+}
+
+#header #branding {
+  flex-grow: 8;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#header #branding h1 {
+  font-size: 28px;
+}
+
+@media (max-width: 567px) {
+  #header #branding h1 {
+    text-align: center;
+  }
+}
+
+#header #branding h1 .highlight {
+  color: #32a0c2;
+}
+
+#header nav ul {
+  display: flex;
+  padding: 10px;
+}
+
+#header nav ul li {
+  margin-right: 10px;
+  width: fit-content;
+}
+
+#header nav ul li.current a {
+  color: #32a0c2;
+}
+/* End Header */
+/* Start showCase */
+#showCase {
+  min-height: 400px;
+  background: url("../img/image.jpg") no-repeat center;
+  background-size: cover;
+  text-align: center;
+  padding: var(--section-padding);
+}
+
+#showCase h2 {
+  font-size: 55px;
+  margin-bottom: 10px;
+  color: var(--main-color);
+}
+
+#showCase p {
+  color: #fff;
+  font-size: 20px;
+}
+/* End showCase */
+/* Start News Letter */
+#newsLetter {
+  padding: 10px var(--section-padding);
+  color: #fff;
+  background-color: var(--second-color);
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+}
+
+#newsLetter h2 {
+  margin: 15px auto;
+  font-size: 20px;
+}
+
+#newsLetter form {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  margin: 15px auto;
+}
+
+#newsLetter form input[type="email"] {
+  padding: 3px;
+  height: 35px;
+  width: 250px;
+  flex-grow: 1;
+}
+
+#newsLetter form button {
+  background-color: #ccc;
+  height: 38px;
+  border: 3px solid var(--second-color);
+  padding: 0 20px;
+  color: var(--second-color);
+  flex-grow: 5;
+}
+/* End News Letter */
+/* Start skills */
+#skills {
+  padding: 50px var(--section-padding);
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+#skills .box {
+  text-align: center;
+  margin: 20px 0 0 20px;
+  flex: 30%;
+}
+
+@media (max-width: 920px) {
+  #skills .box {
+    flex: 100%;
+  }
+}
+
+#skills .box h3 {
+  margin: 20px 0;
+}
+/* End skills */
+
+/* Start Footer */
+#footer {
+  text-align: center;
+  background-color: var(--main-color);
+  padding: 20px 0;
+  color: #fff;
+}
+/* End Footer */
+
+/* Start Slider*/
+#slider {
+  /* padding: 0 200px; */
+  margin: 50px auto;
+  border: 5px solid var(--second-color);
+  height: 650px;
+  overflow: hidden;
+  position: relative;
+}
+
+#slider #wrapper {
+  height: 100%;
+  width: 400%;
+  transition: transform 0.5s ease-in-out;
+  display: flex;
+}
+
+#slider .content {
+  flex: 25%;
+  height: 100%;
+}
+
+#slider .content img {
+  width: 100%;
+  display: block;
+}
+
+#slider #navLinks ul {
+  text-align: center;
+  /* overflow: hidden; */
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+
+#slider #navLinks li {
+  display: block;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: #ccc;
+  border: 5px solid var(--main-color);
+  cursor: pointer;
+}
+
+#slider #navLinks li:not(:last-child) {
+  margin-left: 10px;
+}
+
+#slider #navLinks li:hover {
+  background-color: var(--second-color);
+}
+
+#slider #navLinks li.active {
+  background-color: var(--main-color);
+  border-color: var(--second-color);
+}
+
+/* End Slider*/
