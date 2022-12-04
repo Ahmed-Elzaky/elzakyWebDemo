@@ -24,3 +24,26 @@ $links.click(function (e) {
 })
 
 $($links[0]).addClass('active');
+
+
+let silderAccum = 0;
+
+let $angels = $('.angel');
+$angels.click(function (e) {
+  $angels.removeClass('active');
+  let clickedLink = e.target;
+  clickedLink = $(clickedLink);
+  let position = clickedLink.attr('data-direct');
+  silderAccum += position * 25;
+  let translateValue = 'translateX(' + silderAccum + '%)';
+
+  $('#wrapper').css({
+    transform: translateValue
+    // 'transform': translateValue
+  });
+
+  clickedLink.addClass('active');
+
+})
+
+$($angels[1]).addClass('active');

@@ -100,7 +100,7 @@ a {
 /* End Header */
 /* Start showCase */
 #showCase {
-  min-height: 400px;
+  min-height: 300px;
   background: url("../img/image.jpg") no-repeat center;
   background-size: cover;
   text-align: center;
@@ -186,7 +186,6 @@ a {
   margin: 20px 0;
 }
 /* End skills */
-
 /* Start Footer */
 #footer {
   text-align: center;
@@ -198,7 +197,6 @@ a {
 
 /* Start Slider*/
 #slider {
-  /* padding: 0 200px; */
   margin: 50px auto;
   border: 5px solid var(--second-color);
   height: 650px;
@@ -225,7 +223,6 @@ a {
 
 #slider #navLinks ul {
   text-align: center;
-  /* overflow: hidden; */
   position: absolute;
   bottom: 5px;
   left: 50%;
@@ -257,3 +254,21 @@ a {
 }
 
 /* End Slider*/
+
+#angels ul {
+  display: flex;
+}
+
+#angels ul li {
+  display: block;
+  color: #353637;
+  cursor: pointer;
+}
+
+#angels li i:hover {
+  color: #ccc;
+}
+
+#angels li i.active {
+  color: #dc3545;
+}
