@@ -6,24 +6,24 @@ $(function () {
 
 
 // Gallery file --------------------------
-let $links = $('.itemLinks');
-$links.click(function (e) {
-  $links.removeClass('active');
-  let clickedLink = e.target;
-  clickedLink = $(clickedLink);
-  let position = clickedLink.attr('data-pos');
-  let translateValue = 'translateX(' + position * 25 + '%)';
+// let $links = $('.itemLinks');
+// $links.click(function (e) {
+//   $links.removeClass('active');
+//   let clickedLink = e.target;
+//   clickedLink = $(clickedLink);
+//   let position = clickedLink.attr('data-pos');
+//   let translateValue = 'translateX(' + position * 25 + '%)';
 
-  $('#wrapper').css({
-    transform: translateValue
-    // 'transform': translateValue
-  });
+//   $('#wrapper').css({
+//     transform: translateValue
+//     // 'transform': translateValue
+//   });
 
-  clickedLink.addClass('active');
+//   clickedLink.addClass('active');
 
-})
+// })
 
-$($links[0]).addClass('active');
+// $($links[0]).addClass('active');
 
 
 let silderAccum = 0;
