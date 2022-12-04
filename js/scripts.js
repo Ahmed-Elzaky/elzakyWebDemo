@@ -34,7 +34,12 @@ $angels.click(function (e) {
   let clickedLink = e.target;
   clickedLink = $(clickedLink);
   let position = clickedLink.attr('data-direct');
-  silderAccum += position * 25;
+
+  // Check Slider Value
+  if ((silderAccum + position * 25) > 0 && (silderAccum + position * 25) < 100) {
+    silderAccum += position * 25;
+  }
+  // console.log($('.content').css('width'));
   let translateValue = 'translateX(' + silderAccum + '%)';
 
   $('#wrapper').css({
